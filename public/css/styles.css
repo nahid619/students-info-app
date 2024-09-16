@@ -1,0 +1,137 @@
+/* General Body Styles */
+body {
+    background-color: #f3f4f6;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    padding: 20px;
+}
+
+/* Main Heading */
+h1 {
+    color: #4e73df;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Form Card */
+.card {
+    background: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Form Styling */
+.form-group label {
+    font-weight: 600;
+    color: #6c757d;
+    margin-bottom: 10px;
+}
+
+.form-control {
+    border: 2px solid #ced4da;
+    padding: 12px;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #4e73df;
+    box-shadow: 0 0 5px rgba(78, 115, 223, 0.3);
+}
+
+.btn {
+    border-radius: 50px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Gradient Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #4e73df, #6b9cff);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #3b64cc, #557ecf);
+}
+
+/* Table Styling */
+.table {
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: #4e73df;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.table td {
+    padding: 16px;
+    text-align: center;
+    vertical-align: middle;
+    color: #555;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f8f9fc;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Action Buttons */
+.btn-warning {
+    background: linear-gradient(135deg, #f6c23e, #f7b500);
+    border: none;
+}
+
+.btn-warning:hover {
+    background: linear-gradient(135deg, #e0a800, #f5a500);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #e74a3b, #d73222);
+    border: none;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(135deg, #c82333, #b01f2a);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .table {
+        font-size: 0.9rem;
+    }
+
+    .form-control {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}

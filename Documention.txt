@@ -1,0 +1,87 @@
+To-Do Application for Student Info Management
+This is a Laravel-based To-Do application for managing student information with seamless CRUD operations through AJAX. The following steps will guide you on setting up the project using Laragon.
+
+Prerequisites
+Ensure you have the following:
+
+Laragon installed.
+Git for version control.
+Node.js (installed with Laragon).
+Composer (installed with Laragon).
+MySQL (included with Laragon).
+Steps to Set Up the Project in Laragon
+1. Clone the Repository
+First, open Laragon’s terminal (right-click the Laragon tray icon and select Terminal). Clone the GitHub repository to your desired folder in the Laragon's www directory:
+
+
+cd C:/laragon/www
+git clone https://github.com/yourusername/your-repo-name.git
+Then, navigate to the project directory:
+
+cd your-repo-name
+2. Install Composer Dependencies
+Run the following command in Laragon’s terminal to install the necessary PHP dependencies:
+
+bash
+Copy code
+composer install
+3. Set Up the Environment File
+Copy the .env.example file to .env:
+
+bash
+Copy code
+cp .env.example .env
+Then, generate the application key:
+
+bash
+Copy code
+php artisan key:generate
+Open the .env file and configure the database settings. If using Laragon’s default database setup, the configuration should look like this:
+
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_database_name
+DB_USERNAME=root
+DB_PASSWORD=
+
+
+4. Create the Database
+In Laragon, open phpMyAdmin by visiting http://localhost/phpmyadmin. Log in using the default credentials (root with no password), then create a new database for the project.
+
+Alternatively, use the Laragon MySQL console:
+
+mysql -u root
+CREATE DATABASE your_database_name;
+
+5. Run Migrations
+Migrate the database tables by running:
+
+php artisan migrate
+
+6. Install Node.js Dependencies
+Run the following command to install frontend dependencies using npm (which comes with Laragon):
+
+npm install
+
+7. Compile Frontend Assets
+After installing dependencies, compile the CSS and JavaScript files:
+
+npm run dev
+
+For production:
+npm run prod
+
+8. Start the Project
+In the Laragon dashboard, click Start All to ensure your local server and database are running. Then, start serving the project using:
+
+php artisan serve
+This will serve the application at http://localhost:8000.
+
+9. Open the Application
+You can now access the To-Do application in your browser at:
+
+http://localhost:8000
+
+From here, you can perform all CRUD operations for managing student information with real-time updates using AJAX.
